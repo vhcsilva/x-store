@@ -1,0 +1,22 @@
+.wrapper {
+    position: absolute;
+    margin: 0 -24px;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 24px;
+}
+
+.logo svg {
+    display: flex;
+    align-items: center;
+
+    width: auto;
+    height: var(--logoHeight);
+    margin-right: 0.5rem; /* 8px */
+    fill: var(--logoContextMenuColor);
+}
