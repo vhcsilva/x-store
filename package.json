@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@taikai/dappkit": "^2.3.1",
     "@taikai/rocket-kit": "^3.0.8",
     "next": "14.0.4",
     "react": "^18",
