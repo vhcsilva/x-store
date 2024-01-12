@@ -1,9 +1,11 @@
 'use client';
 
+import MxxsList from "@/components/MxxsList";
+
 export default function MxX() {
   return (
     <main >
-      MxX
+      <MxxsList />
     </main>
   )
 }

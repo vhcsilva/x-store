@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 import './globals.css';
+import RootProvider from "@/components/RootProvider";
 
 export const metadata: Metadata = {
   title: 'LayerX - Store',
@@ -20,9 +21,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body id="body">
-        <Navbar />
-        {children}
-        <Footer />
+        <RootProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </RootProvider>
       </body>
     </html>
   )

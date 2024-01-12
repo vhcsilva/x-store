@@ -3,11 +3,15 @@ import styles from "@/components/ProductsList/styles.module.css";
 import { products } from "@/mocks/products";
 import ProductCard from "@/components/ProductCard";
 
-export default function ProductsList () {
+export default function ProductsList ({
+  title = "Featured"
+}: {
+  title?: string
+}) {
   return(
     <div className={styles.wrapper}>
       <div className={styles.featured}>
-        <h3>Featured</h3>
+        <h3>{title}</h3>
         <div className={styles.line}></div>
       </div>
 

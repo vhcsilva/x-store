@@ -8,6 +8,7 @@ interface AppContext {
   setHasNft: (value: boolean) => void;
   addToCart: (value: Product) => void;
   removeFromCart: (value: Product) => void;
+  clearCart: () => void;
 }
 
 export const useAppContext = create<AppContext>((set, get) => ({
@@ -16,4 +17,5 @@ export const useAppContext = create<AppContext>((set, get) => ({
   setHasNft: (hasNft: boolean) => set(() => ({ hasNft })),
   addToCart: (value: Product) => set(() => ({ cart: [...get().cart, value] })),
   removeFromCart: (value: Product) => set(() => ({ cart: get().cart.filter(({name}) => value.name !== name) })),
+  clearCart: () => set(() => ({ cart: [] })),
 }));

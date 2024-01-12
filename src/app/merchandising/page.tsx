@@ -1,9 +1,14 @@
 'use client';
 
+import styles from "./styles.module.css";
+import ProductsList from "@/components/ProductsList";
+
 export default function Merchandising() {
   return (
-    <main >
-      Merchandising
+    <main className={styles.wrapper}>
+      <ProductsList
+        title={"Merchadising"}
+      />
     </main>
   )
 }
