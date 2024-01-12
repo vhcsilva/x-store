@@ -1,0 +1,90 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 1px solid white;
+    transition: border .1s ease-in .1s;
+    width: 280px;
+    height: 350px;
+    position: relative;
+}
+
+.wrapper img {
+    transition: all .1s linear .1s;
+}
+
+.wrapper:hover img {
+    transform: scale(1.1);
+}
+
+.name {
+    color: var(--grey800);
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    transition: all .1s linear .1s;
+}
+
+.prices {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.price {
+    color: var(--grey800);
+    font-weight: 400;
+    margin: 5px;
+    transition: all .1s linear .1s;
+}
+
+.priceWithDiscount {
+    text-decoration: line-through;
+}
+
+.discount {
+    color: red;
+    font-weight: 400;
+    margin: 5px;
+    transition: all .1s linear .1s;
+}
+
+@keyframes buttonMovementIn {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-31px);
+    }
+}
+
+.addToCartButtonContainer button {
+    width: 100%;
+}
+
+.nftOwnersTag {
+    position: absolute;
+    text-align: center;
+    width: 160%;
+    top: 39%;
+    transform: rotateZ(-30deg);
+    z-index: 5;
+}
+
+.addToCartButtonContainer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    transition: all .2s linear .2s;
+    display: none;
+}
+
+.wrapper:hover .addToCartButtonContainer {
+    display: block;
+    animation: buttonMovementIn .2s;
+    transform: translateY(-31px);
+}
