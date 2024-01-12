@@ -1,5 +1,5 @@
 import {useState} from "react";
-import {Button, Icon} from "@taikai/rocket-kit";
+import {Button} from "@taikai/rocket-kit";
 
 import WalletSelectorDrawer from "@/components/WalletSelectorDrawer";
 
@@ -10,14 +10,6 @@ export default function ConnectWalletButton () {
 
   return (
     <div className={styles.wrapper}>
-      <span>If you are a Mx. X owner, connect your wallet to get exclusive offers</span>
-
-      <Icon
-        icon={"arrowRight"}
-        fill={"white"}
-        style={{height: "20px"}}
-      />
-
       <Button
         color={"white"}
         txtColor={"black"}

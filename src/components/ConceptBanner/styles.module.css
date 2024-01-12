@@ -1,0 +1,11 @@
+.wrapper {
+    width: 100%;
+    text-align: center;
+    padding: 40vh 0px;
+    background-color: #09043d;
+    background-image: url(/static/images/x-store-bg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 100px;
+}

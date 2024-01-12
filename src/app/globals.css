@@ -17,7 +17,7 @@
   --fontSizeS: 0.875rem; /* 14px */
 
   /* Navigation */
-  --logoHeight: 1.5rem; /* 24px */
+  --logoHeight: 35px;
   --logoContextMenuBorderColor: var(--grey800);
   --logoContextMenuBackground: rgba(23, 23, 28, 0.80);
   --logoContextMenuColor: var(--white);
@@ -39,7 +39,6 @@ html {
 body {
   margin: 0;
   background-color: #0C0C0E;
-  padding: 0 1.5rem; /* 0 24px */
   font-family: "Inter", Verdana, -apple-system, "system-ui", Arial, Helvetica, sans-serif;
   font-size: 1rem; /* 16px */
   font-weight: 400;
@@ -47,6 +46,8 @@ body {
   color: #ffffff;
   overflow-x: hidden;
   width: 100vw;
+  min-height: 100vh;
+  position: relative;
 }
 
 h1, h2, h3 {

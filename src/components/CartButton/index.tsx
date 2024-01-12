@@ -1,4 +1,4 @@
-import {Button, Icon} from "@taikai/rocket-kit";
+import {Icon} from "@taikai/rocket-kit";
 
 import styles from "@/components/CartButton/styles.module.css";
 
@@ -7,7 +7,7 @@ export default function CartButton () {
     <button className={styles.cartButton}>
       <Icon
         icon={"cart"}
-        fill={"black"}
+        fill={"white"}
         style={{height: "30px"}}
       />
     </button>

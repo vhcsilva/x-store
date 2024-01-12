@@ -1,0 +1,11 @@
+.wrapper {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: black;
+}
+
+.wrapper h5 {
+    margin: 5px;
+}

@@ -1,0 +1,9 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 0;
+    background-color: var(--grey200);
+    color: black;
+    font-weight: 500;
+}
