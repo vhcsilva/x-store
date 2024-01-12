@@ -4,8 +4,9 @@
     width: 100%;
     text-align: center;
     background-color: black;
+    padding: 5px;
 }
 
-.wrapper h5 {
-    margin: 5px;
+.wrapper span {
+    color: white;
 }

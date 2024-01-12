@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function About() {
   return (
     <main className={styles.wrapper}>
-      <h2>Builders</h2>
+      <h1>Builders</h1>
       <div className={styles.team}>
         <div className={styles.member}>
           <Image

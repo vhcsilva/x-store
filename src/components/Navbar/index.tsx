@@ -16,18 +16,18 @@ export default function Navbar() {
 
   return (
     <div className={styles.wrapper} id="navbar">
-      { address ? <></> : <TopBanner />}
+      {address ? <></> : <TopBanner/>}
 
       <div className={styles.container}>
         <div></div>
         <Link href="/" className={styles.logo}>
-          <LayerXLogo />
+          <LayerXLogo/>
         </Link>
 
-        { address ? <CartButton /> : <ConnectWalletButton />}
+        {address ? <CartButton/> : <ConnectWalletButton/>}
       </div>
 
-      <NavbarLinks />
+      <NavbarLinks/>
     </div>
   );
 }

@@ -4,6 +4,6 @@ export interface Product {
   image: string;
   category: string;
   subCategory: string;
-  exclusive?: boolean;
-  exclusiveDiscount?: number;
+  exclusive: boolean;
+  exclusiveDiscount: number;
 }

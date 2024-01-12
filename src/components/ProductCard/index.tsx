@@ -1,13 +1,17 @@
-import {Product} from "@/types/product";
-
-import styles from "@/components/ProductCard/styles.module.css"
 import Image from "next/image";
-import {formatToEuro} from "@/utils/formatter";
 import {Button, Tag} from "@taikai/rocket-kit";
-import {useAppState} from "@/contexts/app-context";
+
+import {Product} from "@/types/product";
+import styles from "@/components/ProductCard/styles.module.css"
+import {formatToEuro} from "@/utils/formatter";
+import {useAppContext} from "@/stores/app-store";
 
 export default function ProductCard (product: Product) {
-  const { hasNft } = useAppState();
+  const { hasNft, addToCart } = useAppContext();
+
+  const discount = hasNft && product.exclusiveDiscount > 0 ? product.price * product.exclusiveDiscount / 100 : 0;
+  const hasDiscount = discount > 0;
+  const priceSubDiscount = product.price - discount;
 
   return (
     <div className={styles.wrapper}>
@@ -29,15 +33,23 @@ export default function ProductCard (product: Product) {
         {product.name}
       </h4>
 
-      <h5 className={styles.price}>
-        {formatToEuro(product.price)}
-      </h5>
+      <div className={styles.prices}>
+        <h5 className={`${styles.price} ${hasDiscount ? styles.priceWithDiscount: ""}`}>
+          {formatToEuro(product.price)}
+        </h5>
+        {hasDiscount &&
+            <h5 className={styles.discount}>
+              {formatToEuro(priceSubDiscount)}
+            </h5>
+        }
+      </div>
 
       <div className={styles.addToCartButtonContainer}>
-        { (!product.exclusive || hasNft) &&
+        {(!product.exclusive || hasNft) &&
           <Button
             value={"Add to cart"}
             icon={"cart"}
+            action={() => addToCart(product)}
           />
         }
       </div>

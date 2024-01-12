@@ -43,7 +43,7 @@ body {
   font-size: 1rem; /* 16px */
   font-weight: 400;
   font-feature-settings: 'cv05' on;
-  color: #ffffff;
+  color: black;
   overflow-x: hidden;
   width: 100vw;
   min-height: 100vh;
@@ -60,6 +60,7 @@ h1, h2, h3 {
 h1 {
   background: linear-gradient(115.74deg, #FFFFFF 33.59%, rgba(255, 255, 255, 0.38) 92.51%);
   font-size: 2.4rem; /* 38.4px */
+  color: white;
 }
 
 h2 {
@@ -67,7 +68,7 @@ h2 {
   font-size: 1.5rem; /* 24px */
 }
 
-h1, h2 {
+h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
