@@ -29,7 +29,7 @@ export default function CartDrawer ({
       title="Checkout"
     >
       <div className={styles.wrapper}>
-        {cart.map(item => <ProductOnCart {...item} />)}
+        {cart.map(item => <ProductOnCart key={item.name} {...item} />)}
       </div>
       <div className={styles.amount}>
         <span>Amount:</span>
