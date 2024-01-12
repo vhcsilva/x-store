@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import styles from "@/components/ProductCard/styles.module.css";
+import styles from "./styles.module.css";
 import {Mxx} from "@/types/mxx";
 
 export default function MxxCard (mxx: Mxx) {
