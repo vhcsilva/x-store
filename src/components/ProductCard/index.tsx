@@ -5,8 +5,11 @@ import {Product} from "@/types/product";
 import styles from "@/components/ProductCard/styles.module.css"
 import {formatToEuro} from "@/utils/formatter";
 import {useAppContext} from "@/stores/app-store";
+import {useDappkit} from "dappkit-react";
 
 export default function ProductCard (product: Product) {
+  const { address } = useDappkit();
+
   const { hasNft, addToCart } = useAppContext();
 
   const discount = hasNft && product.exclusiveDiscount > 0 ? product.price * product.exclusiveDiscount / 100 : 0;
@@ -45,7 +48,7 @@ export default function ProductCard (product: Product) {
       </div>
 
       <div className={styles.addToCartButtonContainer}>
-        {(!product.exclusive || hasNft) &&
+        {((!product.exclusive || hasNft) && !!address) &&
           <Button
             value={"Add to cart"}
             icon={"cart"}
