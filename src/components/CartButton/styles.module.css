@@ -1,3 +1,19 @@
+.wrapper {
+    position: relative;
+}
+
+.quantity {
+    position: absolute;
+    background: #EB5757;
+    right: 0;
+    top: -5px;
+    color: white;
+    font-size: 10px;
+    padding: 2px 5px;
+    border-radius: 50%;
+    font-weight: 600;
+}
+
 .cartButton {
     background: none;
     border: none;
